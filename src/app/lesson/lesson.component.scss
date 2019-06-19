@@ -1,0 +1,31 @@
+@import "../app.fonts";
+.content {
+  @include regular-font;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 40px;
+    align-content: space-between;
+    .name {
+      margin-top: 2px;
+      @include regular-font;
+      color: $fontNamesColor;
+    }
+    .time{
+      @include light-font;
+      margin-bottom: 2px;
+    }
+    .spacer{
+      flex:2 2 auto;
+    }
+  }
+}
