@@ -5,7 +5,19 @@
   display: flex;
   align-items: center;
 }
-
+.title {
+  display: flex;
+  .spacer{
+    flex: 2 0 auto;
+  }
+  img{
+    align-self: center;
+  }
+  img:last-child {
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+}
 .author {
   display: flex;
 
@@ -22,10 +34,63 @@
     }
     .time{
       @include light-font;
-      margin-bottom: 2px;
+      margin-top: 4px;
     }
-    .spacer{
-      flex:2 2 auto;
+
+  }
+}
+
+.introAndButtons{
+  display: flex;
+  img.pfaa{
+    margin: 20px 20px 20px 0px;
+  }
+  .titles {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 610px;
+    .topic {
+      margin-top: 39px;
+      font-family: $fontFamily;
+      //TODO move to app.fonts
+      font-size: 18px;
+      line-height: 100%;
+      color: $fontNamesColor;
+    }
+
+    h2 {
+      @include h2
+    }
+
+    h3 {
+      @include h3
+    }
+
+    .level {
+      @include sub-regular-font;
+      line-height: 200%;
+    }
+
+    .spacer {
+      flex: 2 2 auto;
+    }
+
+    .buttons {
+      align-self: center;
+      span {
+        @include regular-font;
+        color: $fontNavColor;
+        padding-bottom: 12px;
+        border-bottom: $fontNavColor 2px solid;
+        margin-right: 24px;
+        padding-left: 12px;
+        padding-right: 12px;
+
+      }
+      button{
+        @include mint-button
+      }
     }
   }
 }

@@ -1,10 +1,25 @@
 @import "app.constants";
 $fontFamily: 'Source Sans Pro', sans-serif;
+$fontSmallContentHeight: .75rem;
 $fontContentHeight: .8rem;
+$fontTopicHeight: 1rem;
+$fontH2Height: 1.5rem;
+$fontH3Height: 1rem;
+$fontBoldWeight: 600;
 $fontRegularWeight: 500;
 $fontLightWeight: 300;
 $fontNamesColor: $seaBlueColor;
+$fontNavColor: $skyBlueColor;
+$fontCardTitleColor: $prettyBLackColor;
 
+
+
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 @mixin regular-font {
   font-family: $fontFamily;
@@ -12,8 +27,36 @@ $fontNamesColor: $seaBlueColor;
   font-size: $fontContentHeight;
 }
 
+@mixin sub-regular-font {
+  font-family: $fontFamily;
+  font-weight: $fontRegularWeight;
+  font-size: $fontSmallContentHeight;
+}
+
 @mixin light-font {
   font-family: $fontFamily;
   font-weight: $fontLightWeight;
   font-size: $fontContentHeight;
+}
+@mixin h2 {
+  @include reset-list;
+  color:$fontCardTitleColor;
+  font-family: $fontFamily;
+  font-weight: $fontBoldWeight;
+  font-size: $fontH2Height;
+}
+@mixin h3 {
+  @include reset-list;
+  color:$fontCardTitleColor;
+  font-family: $fontFamily;
+  font-weight: $fontRegularWeight;
+}
+
+@mixin mint-button {
+  background: $mintGreen;
+  border-radius: 10px;
+  width: 126px;
+  height: 26px;
+  color: white;
+  border: none;
 }
