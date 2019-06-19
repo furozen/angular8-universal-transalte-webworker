@@ -16,6 +16,15 @@
   min-width:32px;
   flex-basis: 435px;
 }
+.menu{
+  min-width: 255px;
+  flex-basis: 255px;
+
+}
+.spacer2 {
+  flex-basis: 685px;
+}
+
 .menu>ul{
   display: flex;
   align-items: center;
