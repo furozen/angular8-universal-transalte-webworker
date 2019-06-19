@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { ToolbarMenuComponent } from './toolbar-menu/toolbar-menu.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarMenuComponent
   ],
   imports: [
     BrowserModule
