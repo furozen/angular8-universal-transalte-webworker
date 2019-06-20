@@ -8,6 +8,8 @@ import { LessonPanelComponent } from './lesson-panel/lesson-panel.component';
 import { LessonComponent } from './lesson/lesson.component';
 import { LessonSocialComponent } from './lesson-social/lesson-social.component';
 import { LessonCommentsComponent } from './lesson-comments/lesson-comments.component';
+import { LessonCommentComponent } from './lesson-comments/lesson-comment/lesson-comment.component';
+import { NewCommentComponent } from './lesson-comments/new-comment/new-comment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LessonCommentsComponent } from './lesson-comments/lesson-comments.compo
     LessonPanelComponent,
     LessonComponent,
     LessonSocialComponent,
-    LessonCommentsComponent
+    LessonCommentsComponent,
+    LessonCommentComponent,
+    NewCommentComponent
   ],
   imports: [
     BrowserModule

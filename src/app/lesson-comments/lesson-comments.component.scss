@@ -1,0 +1,12 @@
+@import "~src/app/app.fonts";
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  .more-comments{
+    align-self: center;
+    @include counter-font;
+    color: $fontNavColor;
+    margin-top: 9px;
+    margin-bottom: 12px;
+  }
+}

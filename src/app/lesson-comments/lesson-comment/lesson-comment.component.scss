@@ -1,0 +1,36 @@
+@import "~src/app/app.fonts";
+
+.wrapper{
+  margin-top: 13px;
+  padding-bottom: 18px;
+  border-bottom: $lightGreyBorder;
+}
+.text {
+  @include regular-font;
+
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  img{
+    margin-top: 6px;
+  }
+  .texts {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+    align-content: space-between;
+    .name {
+      @include regular-font;
+      color: $fontNamesColor;
+      margin-bottom: 4px;
+    }
+    .time{
+      @include light-font;
+      margin-top: 4px;
+    }
+
+  }
+}
