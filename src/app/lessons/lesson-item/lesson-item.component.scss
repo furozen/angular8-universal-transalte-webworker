@@ -1,0 +1,75 @@
+@import "~src/app/app.fonts";
+$smallSize: 13px;
+$titleSize: 16px;
+$panel_width: 178px;
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  .author_row{
+    display: flex;
+    align-content: center;
+    img {
+      height: 17px;
+      width: 17px;
+    }
+    .name{
+      padding-left: 8px;
+      @include regular-font;
+    }
+  }
+  img{
+    width: $panel_width;
+    height: $panel_width;
+  }
+
+  .topic {
+
+    font-family: $fontFamily;
+    //TODO move to app.fonts
+    font-size: $smallSize;
+    line-height: 100%;
+    color: $fontNamesColor;
+  }
+
+  h2 {
+    @include h2;
+    font-size: $titleSize;
+  }
+
+  h3 {
+    @include h3;
+    font-size: $smallSize;
+  }
+
+  .data{
+    display: flex;
+    font-family: $fontFamily;
+    font-size: 11px;
+    align-items: center;
+    justify-content: space-between;
+    width: $panel_width;
+    color: $fontDataColor;
+
+    span.icon{
+      position: relative;
+      width: 20px;
+    }
+
+    .icon::before {
+      content:'';
+      position: absolute;
+      left: -15px;
+    }
+
+    .star::before {
+      content: url('/assets/card/mini_star_icon.png');
+    }
+    .view::before {
+      content: url('/assets/card/mini_view_icon.png');
+    }
+
+
+  }
+
+}

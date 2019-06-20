@@ -1,0 +1,28 @@
+@import "~src/app/app.fonts";
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1{
+
+    @include h1;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 75px;
+
+  }
+
+}
+
+.lessons{
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 742px;
+  justify-content: space-between;
+
+  .item{
+    width: 178px;
+    margin-bottom: 15px;
+  }
+}
