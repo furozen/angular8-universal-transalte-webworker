@@ -1,10 +1,10 @@
 <div class="wrapper">
     <div class="title">
         <div class="author">
-            <img src="/assets/card/Avatar.png">
+            <img src="{{avatar}}">
             <div class="texts">
-                <div class="name">Anna Dormund</div>
-                <div class="time">14:55 pm</div>
+                <div class="name">{{data.author.name}} {{data.author.surname}}</div>
+                <div class="time">{{dateTime}}</div>
             </div>
         </div>
         <div class="spacer"></div>
@@ -14,17 +14,16 @@
 
     </div>
     <div class="introAndButtons">
-        <img class="pfaa" src="/assets/card/Bg.png">
+        <img class="pfaa" src="{{picture}}">
         <div class="titles">
-            <div class="topic">Урок</div>
-            <h2>Фрукты и овощи</h2>
-            <h3>Fruits and vegetables</h3>
-            <div class="level">Средний уровень</div>
+            <div class="topic" translate>Lesson</div>
+            <h2>{{data.title[data.primaryLang]}}</h2>
+            <h3>{{data.title[data.secondaryLang]}}</h3>
+            <div class="level">{{data.level | translate}}</div>
             <div class="spacer"></div>
-            <div class="buttons"><span>Об уроке</span><span>Содержание</span><span>Упражнения</span><button>Начать урок</button></div>
+            <div class="buttons"><span translate>about</span><span translate>contents</span><span translate>tests</span><button translate>start-lesson</button></div>
 
         </div>
     </div>
-    <div class="content">Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего...
-      </div>
+    <div class="content">{{data.description}}</div>
 </div>

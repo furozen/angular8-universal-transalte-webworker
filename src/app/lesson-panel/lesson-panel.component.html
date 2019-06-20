@@ -1,5 +1,5 @@
 <article class="wrapper">
-    <app-lesson></app-lesson>
-    <app-lesson-social></app-lesson-social>
-    <app-lesson-comments></app-lesson-comments>
+    <app-lesson [data]="data"></app-lesson>
+    <app-lesson-social [data]="data"></app-lesson-social>
+    <app-lesson-comments [id]="data.id"></app-lesson-comments>
 </article>

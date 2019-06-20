@@ -1,3 +1,10 @@
 {
-  "Title of": "caption of"
+  "Lesson": "Lesson",
+  "beginner": "beginner",
+  "intermediate" : "intermediate",
+  "advanced" : "advanced",
+  "about":"About",
+  "contents": "Table of contents",
+  "tests": "Tests",
+  "start-lesson":"Start the lesson"
 }
