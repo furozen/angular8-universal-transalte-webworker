@@ -12,6 +12,13 @@ import { LessonCommentComponent } from './lesson-comments/lesson-comment/lesson-
 import { NewCommentComponent } from './lesson-comments/new-comment/new-comment.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { LessonItemComponent } from './lessons/lesson-item/lesson-item.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -27,7 +34,15 @@ import { LessonItemComponent } from './lessons/lesson-item/lesson-item.component
     LessonItemComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' })
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
