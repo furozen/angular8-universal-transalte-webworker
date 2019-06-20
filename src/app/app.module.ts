@@ -27,7 +27,7 @@ import { LessonItemComponent } from './lessons/lesson-item/lesson-item.component
     LessonItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' })
   ],
   providers: [],
   bootstrap: [AppComponent]
