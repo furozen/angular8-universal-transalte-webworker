@@ -1,4 +1,8 @@
 @import "../app.fonts";
+.wrapper{
+  padding-bottom: 18px;
+  border-bottom: $lightGreyBorder;
+}
 .content {
   @include regular-font;
   line-height: 22px;

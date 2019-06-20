@@ -2,6 +2,8 @@
 $fontFamily: 'Source Sans Pro', sans-serif;
 $fontSmallContentHeight: .75rem;
 $fontContentHeight: .8rem;
+$fontCounterHeight: .9rem;
+
 $fontTopicHeight: 1rem;
 $fontH2Height: 1.5rem;
 $fontH3Height: 1rem;
@@ -25,6 +27,11 @@ $fontCardTitleColor: $prettyBLackColor;
   font-family: $fontFamily;
   font-weight: $fontRegularWeight;
   font-size: $fontContentHeight;
+}
+@mixin counter-font {
+  font-family: $fontFamily;
+  font-weight: $fontRegularWeight;
+  font-size: $fontCounterHeight;
 }
 
 @mixin sub-regular-font {
