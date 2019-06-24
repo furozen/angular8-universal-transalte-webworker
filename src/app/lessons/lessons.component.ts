@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ILesson, LessonsService} from '../lessons.service';
 
 @Component({
   selector: 'app-lessons',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lessons.component.scss']
 })
 export class LessonsComponent implements OnInit {
-
-  constructor() { }
+  @Input() exludeId;
+  data:ILesson[] = [];
+  constructor(private lessonsService:LessonsService) { }
 
   ngOnInit() {
+     this.lessonsService.getLessons(this.exludeId).subscribe((item)=>{
+       this.data.push(item);
+     })
   }
 
 }

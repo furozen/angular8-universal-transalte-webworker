@@ -1,18 +1,18 @@
 <div class="wrapper">
 
   <div class="author_row">
-          <img src="/assets/card/Avatar.png">
-          <span class="name">Anna Dormund</span>
+          <img src="{{avatar}}">
+          <span class="name">{{data.author.name}} {{data.author.surname}}</span>
   </div>
-  <img src="/assets/card/Bg.png">
-  <div class="topic">Карточки - Меморайзер</div>
-  <h2>Present simple vol.1 for beginners</h2>
-  <h3>Время настоящее для нач..</h3>
+  <img src="{{picture}}">
+  <div class="topic">{{data.category}}</div>
+  <h2>{{data.title[data.primaryLang]}}</h2>
+  <h3>{{data.title[data.secondaryLang] | slice:0:25}}...</h3>
   <div class="data">
-      <span>2 days ago</span>
+      <span>{{dateTime}}</span>
       -
-      <span class="icon star"><span>8.3</span></span>
+      <span class="icon star"><span>{{data.stars}}</span></span>
       -
-      <span class="icon view"><span>12k</span></span>
+      <span class="icon view"><span>{{data.views}}</span></span>
   </div>
 </div>

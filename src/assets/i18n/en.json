@@ -6,5 +6,11 @@
   "about":"About",
   "contents": "Table of contents",
   "tests": "Tests",
-  "start-lesson":"Start the lesson"
+  "start-lesson":"Start the lesson",
+  "timeFormattingKey":"{{year}}-{{month}}-{{day}}",
+  "sinceFormatingKey":"{{year}} years {{month}} months {{day}} days ago",
+  "sinceFormatingKeyYears":"{{year}} лет ago",
+  "sinceFormatingKeyMonths":"{{month}} months ago",
+  "sinceFormatingKeyDays":"{{day}} days ago",
+  "sinceFormatingKeyHours":"{{hour}} hours ago"
 }

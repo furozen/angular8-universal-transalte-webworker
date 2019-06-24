@@ -18,11 +18,12 @@
   align-self: center;
   display: flex;
   flex-wrap: wrap;
-  width: 742px;
-  justify-content: space-between;
+  width: 772px;
+  justify-content: flex-start;
 
   .item{
     width: 178px;
     margin-bottom: 15px;
+    margin-right: 15px;
   }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {DateFormatCases, ILesson, LessonsService} from '../../lessons.service';
 
 @Component({
   selector: 'app-lesson-item',
@@ -6,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lesson-item.component.scss']
 })
 export class LessonItemComponent implements OnInit {
+  @Input() data:ILesson;
+  constructor(private lessonsService:LessonsService) { }
 
-  constructor() { }
+  get dateTime():string{
+    return this.lessonsService.getFormattedDateTime(this.data, DateFormatCases.since);
+  }
+
+  get picture():string{
+    return this.lessonsService.getCardAsset(this.data);
+  }
+
+  get avatar():string{
+    return  this.lessonsService.getAvatarAsset(this.data);
+  }
 
   ngOnInit() {
   }

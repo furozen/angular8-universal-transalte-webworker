@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ILesson} from '../lessons.service';
+import {DateFormatCases, ILesson, LessonsService} from '../lessons.service';
 
 @Component({
   selector: 'app-lesson',
@@ -8,19 +8,18 @@ import {ILesson} from '../lessons.service';
 })
 export class LessonComponent implements OnInit {
   @Input() data:ILesson;
-  constructor() { }
+  constructor(private lessonsService:LessonsService) { }
 
   get dateTime():string{
-    const date=new Date(this.data.timeStamp);
-    return date.toLocaleTimeString();
+    return this.lessonsService.getFormattedDateTime(this.data, DateFormatCases.time);
   }
 
   get picture():string{
-    return '/assets/card/'+this.data.picture;
+    return this.lessonsService.getCardAsset(this.data);
   }
 
   get avatar():string{
-    return '/assets/card/'+this.data.author.avatar;
+    return  this.lessonsService.getAvatarAsset(this.data);
   }
 
   ngOnInit() {

@@ -6,5 +6,11 @@
   "about":"Об уроке",
   "contents": "Содержание",
   "tests": "Упражнения",
-  "start-lesson":"Начать урок"
+  "start-lesson":"Начать урок",
+  "timeFormattingKey":"{{day}}-{{month}}-{{year}} {{hour}}:{{minute}}",
+  "sinceFormatingKey":"{{year}} лет {{month}} месяцев {{day}} дней назад",
+  "sinceFormatingKeyYears":"{{year}} лет назад",
+  "sinceFormatingKeyMonths":"{{month}} месяцев назад",
+  "sinceFormatingKeyDays":"{{day}} дней назад",
+  "sinceFormatingKeyHours":"{{hour}} часов назад"
 }

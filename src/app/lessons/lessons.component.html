@@ -1,6 +1,6 @@
 <div class="wrapper">
     <h1>Похожие уроки</h1>
     <div class="lessons">
-        <app-lesson-item *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" class="item"></app-lesson-item>
+        <app-lesson-item *ngFor="let item of data" [data]="item" class="item"></app-lesson-item>
     </div>
 </div>
