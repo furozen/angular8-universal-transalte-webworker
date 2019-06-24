@@ -1,6 +1,9 @@
 # Test developing task for Lingo 
 
-##Angulat universal 
+
+Example how ngx-translate works with Angular Universal, testing webworker.
+
+##Angular universal 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
