@@ -5,7 +5,9 @@ export class AppPage {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText() as Promise<string>;
+  getFlagElement() {
+    let el = element(by.css("app-lesson-panel > article > app-lesson  div.title > img[src*='content-flag']"));
+    return el;
   }
 }
+

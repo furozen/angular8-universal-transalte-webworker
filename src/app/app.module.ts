@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {LOCALE_ID, NgModule, TRANSLATIONS, TRANSLATIONS_FORMAT} from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -15,7 +15,6 @@ import { LessonItemComponent } from './lessons/lesson-item/lesson-item.component
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {I18n} from '@ngx-translate/i18n-polyfill';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -45,7 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
         }
     })
   ],
-  providers:  [],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

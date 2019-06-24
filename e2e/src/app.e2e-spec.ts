@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should be display flag image', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to au!');
+    expect(page.getFlagElement().isPresent()).toBeTruthy('image of flag should be present on lesson panel');
   });
 
   afterEach(async () => {
