@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {I18nContext} from '@angular/compiler/src/render3/view/i18n/context';
-import {from, Observable} from 'rxjs';
+import {from, Observable, Subject} from 'rxjs';
 import {filter} from 'rxjs/operators';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -354,6 +354,15 @@ export interface DateObject {
   minute:number;
 }
 
+export interface IMessageCommand {
+  type:'command';
+  command:string;
+}
+export interface IUpdateMessageCommand {
+  command:'update',
+  data:{id?:number}
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -362,9 +371,40 @@ export class LessonsService {
   data:ILesson[] = [];
   lesson:ILesson;
   private provider:Observable<ILesson>;
+
+  messenger:Subject<object> = new Subject();
+
   constructor(private translate:TranslateService) {
     this.provider = from(mockData);
+
+    if (typeof Worker !== 'undefined') {
+      // Create a new
+      const worker = new Worker('./data-worker.worker', { type: 'module' });
+      worker.onmessage = this.onMessage;
+      worker.postMessage('hello');
+    } else {
+      // Web Workers are not supported in this environment.
+      // You should add a fallback so that your program still executes correctly.
+      console.log(`webworker is not supported`);
+    }
   }
+
+  onMessage = ({ data:message }) => {
+    if(message['type'] === 'command') {
+      message = message as IMessageCommand;
+      switch (message.command) {
+        case 'update':
+          this.messenger.next(message);
+          mockData[0].likes+=10;
+          //test update
+          this.provider=from(mockData);
+          break;
+        default:
+          console.log('worker:', message);
+      }
+    }
+    console.log('worker:', message);
+  };
 
   getLessonById(id:number){
     return this.provider.pipe(filter(item => item.id === id));

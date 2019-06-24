@@ -10,11 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 export class LessonPanelComponent implements OnInit {
   @Input() id = 1;
   constructor(private lessonsService:LessonsService) {
-    /*this.activeRoute.params.subscribe(params => {
-      if (params.id) {
-        this.id = parseInt(params.id);
-      }
-    });*/
+
   }
   data:ILesson;
   ngOnInit() {

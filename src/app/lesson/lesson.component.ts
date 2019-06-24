@@ -8,7 +8,8 @@ import {DateFormatCases, ILesson, LessonsService} from '../lessons.service';
 })
 export class LessonComponent implements OnInit {
   @Input() data:ILesson;
-  constructor(private lessonsService:LessonsService) { }
+  constructor(private lessonsService:LessonsService) {
+  }
 
   get dateTime():string{
     return this.lessonsService.getFormattedDateTime(this.data, DateFormatCases.time);
