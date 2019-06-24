@@ -1,7 +1,7 @@
 @import "~src/app/app.fonts";
 .wrapper{
   padding-bottom: 18px;
-  border-bottom: $lightGreyBorder;
+
 }
 .content {
   @include regular-font;
@@ -56,9 +56,7 @@
     width: 610px;
     .topic {
       margin-top: 39px;
-      font-family: $fontFamily;
-      //TODO move to app.fonts
-      font-size: 18px;
+      @include topic-font;
       line-height: 100%;
       color: $fontNamesColor;
     }

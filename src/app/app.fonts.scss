@@ -7,6 +7,7 @@ $fontCounterHeight: .9rem;
 $fontTopicHeight: 1rem;
 $fontH1Height: 1.5rem;
 $fontH2Height: 1.5rem;
+$fontTopicsHeight: 1.15rem;
 $fontH3Height: 1rem;
 $fontBoldWeight: 600;
 $fontRegularWeight: 500;
@@ -75,4 +76,9 @@ $fontDataColor: $darkGrey;
   height: 26px;
   color: white;
   border: none;
+}
+
+@mixin topic-font {
+  font-family: $fontFamily;
+  font-size: $fontTopicsHeight;
 }

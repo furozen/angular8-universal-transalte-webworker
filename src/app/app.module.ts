@@ -15,6 +15,7 @@ import { LessonItemComponent } from './lessons/lesson-item/lesson-item.component
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { LessonHrComponent } from './lesson-hr/lesson-hr.component';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,7 +32,8 @@ export function createTranslateLoader(http: HttpClient) {
     LessonCommentComponent,
     NewCommentComponent,
     LessonsComponent,
-    LessonItemComponent
+    LessonItemComponent,
+    LessonHrComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

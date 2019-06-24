@@ -39,9 +39,7 @@ export interface ILesson {
   picture:string,
   level:LessonLevel,
   description: string,
-  // TODO make it more structured
   contents:string,
-  // TODO make it more structured
   test:string,
   timeStamp:number,
   likes:number,
@@ -50,7 +48,6 @@ export interface ILesson {
   views:number,
   stars:number,
   category:string
-
 }
 
 const mockData:ILesson[] = [
@@ -70,9 +67,9 @@ const mockData:ILesson[] = [
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -99,9 +96,9 @@ const mockData:ILesson[] = [
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -120,17 +117,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -149,17 +146,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -178,17 +175,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -207,17 +204,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -236,17 +233,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -265,17 +262,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -294,17 +291,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
@@ -323,17 +320,17 @@ const mockData:ILesson[] = [
       avatar:'Avatar.png'
     },
     title:{
-      en:'Fruits and vegetables',
-      ru:'Фрукты и овощи',
+      en:'Present simple vol.1 for beginners',
+      ru:'Время настоящее для начинающих',
     },
     primaryLang:Lang.ru,
     secondaryLang:Lang.en,
     picture:'Bg.png',
     level:LessonLevel.intermediate,
     description: 'Решили выучить английский язык? Безусловно, вы сделали правильный выбор, ведь английский язык - главный язык международного общения. Ежедневно поддерживай форму! Используй словарный тренажёр всего. Ежедневно поддерживай форму! Используй словарный тренажёр всего.',
-    // TODO make it more structured
+    
     contents:'1. Фрукты; 2. Овощи',
-    // TODO make it more structured
+    
     test:' Пройдите интересный тест ',
     timeStamp: 1561058698217,
 
